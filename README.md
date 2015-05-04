@@ -30,7 +30,9 @@ Once you've created your schema, export it (NOT as a model).  Then go to your Us
 
 *Note*:  This may seem confusing.  Technically, you could just define the new fields in the User's schema.  But it's important to know that a schema is just a pattern or blueprint to follow.  It can be used in multiple models.  For clarification on the difference between a schema and a model see [this SO post](http://stackoverflow.com/questions/22950282/schema-vs-model).
 
-Create a
+**Breakpoint**: You should be able to spin up your server without any errors.  You should also be able to test that your new Order model and new cart schema are working.  You can either create a dummy endpoint and hook it up to your models, or write a script in your server.js file and run it on server load.  Test and make sure that you can create new Orders and add items to a user's cart.
+
+If you've passed this breakpoint, then you have essentially set up your relationships.  Good work!  Let's walk through how you are going to reason about these relationships.
 
 ### Step 2: 
 
