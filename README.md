@@ -24,7 +24,7 @@ Create a schema for orders.  Add whatever fields you feel it might need.  Rememb
 
 Create the Order model with the schema and export it.
 
-Create a schema for cards.  Add whatever fields you feel it might need.  Remember, carts will have one relationship: a reference to products.
+Create a schema for carts.  Add whatever fields you feel it might need.  Remember, carts will have one relationship: a reference to products.
 
 Once you've created your schema, export it (NOT as a model).  Then go to your User model and use the cart schema for the User's cart field.
 
