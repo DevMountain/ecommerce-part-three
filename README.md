@@ -44,6 +44,8 @@ Create the following Express endpoints:
 
 *Note*: If you feel comfortable with everything, feel free to create your own endopints with their own functionality.
 
+### Cart
+
 With the cart POST endpoint, you will expect a query of `user_id` that will take the id of the logged in user (Alternatively, you could get the _id from the passport session).  In the handler, get the user.  The request will have a JSON of the product that is being added to the cart, including a quantity.  Add that item to the user's cart, then save the user.
 
 *Note*: At some point you may realize that the models you created earlier are not appropriate for what we're trying to do.  Feel free to go back to your models to make them work.
@@ -51,6 +53,8 @@ With the cart POST endpoint, you will expect a query of `user_id` that will take
 The cart PUT endpoint will be similar, but is intended to change the quantity of a particular item in the cart. If the new quantity is 0, simply remove the item from the cart altogether.
 
 *Note*:  You'll see that no GET endpoint was created.  Instead, we will simply send the entire cart whenever the user is retrieved.  Look at Mongoose's [.populate()](http://mongoosejs.com/docs/populate.html) method.  Wheverver you are getting your user, add the .populate to populate your cart before sending it to the client.
+
+### Order
 
 With the order POST endpoint, send a query of `user_id` that will include the id of the logged in user (Alternatively, you could get the _id from the passport session).  In the handler, get the user's cart and create a new order with the products in the cart.  Make sure you use the user's id to reference from the order to the user. After successfully creating the order, empty the user's cart.
 
