@@ -5,11 +5,11 @@ eCommerce Project - Part III
 
 The purpose of this application is to build a simple backend using Node, Express, and MongoDB and connect it to a simple front-end Angular application.
 
-During this project you willto work with your database.  You will also solidify your understanding of models, schemas, middleware, and indexing.
+During this project you will use Mongoose to create relationships between multiple sets of data.
 
 ## Resources
 * [Mongoose] (http://mongoosejs.com/)
-* [Bcrypt](https://www.npmjs.com/package/bcrypt) or [Bcrypt-nodejs](https://www.npmjs.com/package/bcrypt-nodejs) for Windows users
+* 
 
 ## The Domain
 
