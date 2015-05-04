@@ -46,7 +46,7 @@ Create the following Express endpoints:
 
 ### Cart
 
-With the cart POST endpoint, you will expect a query of `user_id` that will take the id of the logged in user (Alternatively, you could get the _id from the passport session).  In the handler, get the user.  The request will have a JSON of the product that is being added to the cart, including a quantity.  Add that item to the user's cart, then save the user.
+With the cart POST endpoint, you will expect a request query of `user_id` that will take the id of the logged in user (Alternatively, you could get the _id from the passport session).  In the handler, get the user.  The request will have a JSON of the product that is being added to the cart, including a quantity.  Add that item to the user's cart, then save the user.
 
 *Note*: At some point you may realize that the models you created earlier are not appropriate for what we're trying to do.  Feel free to go back to your models to make them work.
 
@@ -56,9 +56,11 @@ The cart PUT endpoint will be similar, but is intended to change the quantity of
 
 ### Order
 
-With the order POST endpoint, send a query of `user_id` that will include the id of the logged in user (Alternatively, you could get the _id from the passport session).  In the handler, get the user's cart and create a new order with the products in the cart.  Make sure you use the user's id to reference from the order to the user. After successfully creating the order, empty the user's cart.
+With the order POST endpoint, send a request query of `user_id` that will include the id of the logged in user (Alternatively, you could get the _id from the passport session).  In the handler, get the user's cart and create a new order with the products in the cart.  Make sure you use the user's id to reference from the order to the user. After successfully creating the order, empty the user's cart.
 
 **Breakpoint**:  Create a new user and add several items to their cart.  Then take their id and hit the `/api/order` endpoint with it.  It should create a a new order and empty the user's cart.  Use RoboMongo or the command line to check the data.
+
+With the order GET endpoint, simply accept a reqeust query of whatever orders you're searching for.  For example, if you were looking for all orders placed on a certain day, the URL might look like this: `/api/order?date=07/09/16`.  If you were looking for a specific user's orders, it might look like so: `/api/order?user=o09f6d8fnn7df7n9joj`.  
 
 ### Step 3: 
 
