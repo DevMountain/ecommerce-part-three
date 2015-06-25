@@ -33,3 +33,6 @@ app.put('/api/products', productCtrl.put);
 
 app.delete('/api/products', productCtrl.delete);
 
+app.get('/api/test', function(req, res){
+	console.log(req.query);
+});
