@@ -46,9 +46,9 @@ Create the following Express endpoints:
 
 ### Cart
 
-With the cart POST endpoint, you will expect a request query of `user_id` that will take the id of the logged in user (Alternatively, you could get the _id from the passport session).  In the handler, get the user.  The request will have a JSON of the product that is being added to the cart, including a quantity.  Add that item to the user's cart, then save the user.
+With the cart POST endpoint, you will expect a request query of `user_id` that will take the id of a user.  In the handler, get the user.  The request will have a JSON of the product that is being added to the cart, including a quantity.  Add that item to the user's cart, then save the user.
 
-*Note*: At some point you may realize that the models you created earlier are not appropriate for what we're trying to do.  Feel free to go back to your models to make them work.
+*Note*: At some point you may realize that the models you created earlier are not appropriate for what we're trying to do.  Feel free to go back and change your models to make them work.
 
 The cart PUT endpoint will be similar, but is intended to change the quantity of a particular item in the cart. If the new quantity is 0, simply remove the item from the cart altogether.
 
@@ -56,7 +56,7 @@ The cart PUT endpoint will be similar, but is intended to change the quantity of
 
 ### Order
 
-With the order POST endpoint, send a request query of `user_id` that will include the id of the logged in user (Alternatively, you could get the _id from the passport session).  In the handler, get the user's cart and create a new order with the products in the cart.  Make sure you use the user's id to reference from the order to the user. After successfully creating the order, empty the user's cart.
+With the order POST endpoint, send a request query of `user_id` that will include the id a user.  In the handler, get the user's cart and create a new order with the products in the cart.  Make sure you use the user's id to reference from the order to the user. After successfully creating the order, empty the user's cart.
 
 **Breakpoint**:  Create a new user and add several items to their cart.  Then take their id and hit the `/api/order` endpoint with it (via POSTMan or your Angular application).  It should create a a new order and empty the user's cart.  Use RoboMongo or the command line to check the data.
 
@@ -68,8 +68,8 @@ If you've passed this last breakpoint, then  you've finished the backend of your
 
 ### Step 3: Connect front-end
 
-Take some time to connect your Express API to your Angular application.  You have a lot of freedom in how you do that.  Make sure that you have the ability to add items to a user's cart, view the cart, create a new order, and view that order.  If you finish that with ample time, add some extra styling and/or functionality.
+Take some time to connect your Express API to your Angular application.  You have a lot of freedom in how you do that.  Make sure that you have the ability to add items to a user's cart (you might create a dropdown menu to select a user, since there is no authentication yet), view the cart, create a new order, and view that order.  If you finish that with ample time, add some extra styling and/or functionality.
 
 **Breakpoint**: You should be able to do those things ^^.
 
-If you pass that breakpoint, then congrats!  You've just built your first real full-stack application!  What you've just done is the basics of building any CRUD app.
+If you pass that breakpoint, then congrats!  You've just built your first full-stack application!  What you've just done is the basics of building any CRUD app.
