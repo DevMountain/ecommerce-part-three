@@ -1,11 +1,11 @@
 <img src="https://devmounta.in/img/logowhiteblue.png" width="250" align="right">
 
 eCommerce Project - Part III
-=================
+============================
 
-## Objectives
+## Objective
 
-The purpose of this application is to build a simple backend using Node, Express, and MongoDB and connect it to a simple front-end Angular application.
+Build a simple backend using Node, Express, and MongoDB and connect it to a simple front-end Angular application
 
 During this project you will use Mongoose to create relationships between multiple sets of data.
 
